@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SCP Wiki-Home</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<style>
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  cursor: pointer;
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.show {
+  display: block;
+}
+</style>
+<script> 
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+</head>
+<body background=”” vlink=”#ff0000”>
+<div class="navbar">
+  <a href="Home.html">Home</a>
+  <a href="News.html">News</a>
+  <div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">SCP classes</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="Safe.html">Safe</a>
+    <a href="Euclid.html">Euclid</a>
+    <a href="Keter.html">Keter</a>
+    <a href="Thaumiel.html">Thaumiel</a>
+    <a href="Apollyon.html">Apollyon</a>
+  </div>
+</div>
+<div><a href="Report.html">Report any potential SCPs</a></div>
+</div>
+<br>
+<p>Warning. All information beyond this page is classified. Any attempt by unauthorised individuals to access said Information will be regarded as a national threat and treated accordingly.</p>
+  
+</body>
+</html>
