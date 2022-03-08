@@ -1,6 +1,6 @@
 Byfunction validateform(){  
-    var name=document.myform.name.value;  
-    var password=document.myform.password.value;  
+    var name=document.myform.Name.value;  
+    var password=document.myform.Password.value;  
       
     if (name==null || name==""){  
       alert("Name can't be blank");  
