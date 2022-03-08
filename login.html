@@ -3,7 +3,33 @@
 <head>   
 <title> Login Page </title>  
 <link rel="stylesheet" type="text/css" href="mystyle.css">  
-<script src="login.js"></script>
+<script src="login.js">
+    Byfunction validateform(){  
+    var name = document.myForm.username.value;  
+    var password = document.myForm.password.value;  
+      
+    if (name==null || name==""){  
+      alert("Name can't be blank");  
+      return false;
+    function allLetter(name)
+      {
+       var letters = /^[A-Za-z]+$/;
+       if(name.value.match(letters))
+         {
+          return true;
+         }
+       else
+         {
+         alert("Name can't have numbers");
+         return false;
+         }
+      }  
+    }else if(password.length<6){  
+      alert("Password must be at least 6 characters long.");  
+      return false;  
+      }  
+    }  
+</script>
 </head>    
 <body>    
     <center> <h1> Agent Login Form </h1> </center>   
