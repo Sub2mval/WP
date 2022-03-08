@@ -69,6 +69,12 @@
 }
 </style>
 <script> 
+$(document).ready(function(){
+  $("button[name='toggle']").click(function(){
+    $("p").toggle();
+  });
+});
+  
 function myFunction() {
   document.getElementById("myDropdown").classList.toggle("show");
 }
@@ -104,6 +110,7 @@ window.onclick = function(event) {
 </div>
 <div><a href="Report.html">Report any potential SCPs</a></div>
 </div>
+  <button name="toggle">Toggle</toggle>
 <br>
 <p>Warning. All information beyond this page is classified. Any attempt by unauthorised individuals to access said Information will be regarded as a national threat and treated accordingly.</p>
   
